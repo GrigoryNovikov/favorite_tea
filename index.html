@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Exclusive tea</title>
     <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
+    <!--    <link rel="stylesheet" href="css/slick-theme.css">-->
     <link rel="stylesheet" href="plugins/hover-master/hover-min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/main1.css">
+    <link rel="stylesheet" href="css/adaptive.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -568,8 +568,8 @@
                 <div class="inscription">Дарим скидку <span>5%</span> на первый заказ!</div>
                 <div class="inscription">Скопируйте промокод из письма и ставьте чайник</div>
             </div>
-            <form id="form" name="user_email" method="POST">
-                <input type="email" required placeholder="example@gmail.com">
+            <form onsubmit="send(event, 'mail.php')" id="form" method="POST">
+                <input type="email" name="user_email" required placeholder="example@gmail.com">
                 <button type="submit" class="btn">Получить скидку</button>
             </form>
         </div>
@@ -606,8 +606,10 @@
                 Чай подавляет рост злокачественных опухолей, и существенно снижает риск перерождения клеток в раковые
             </div>
         </div>
-        <img id="properties-back-image" src="images/floating%20leaves_useful-properties.png" alt="">
     </div>
+<!--    <div id="properties-back-image">-->
+<!--        <img  src="images/floating%20leaves_useful-properties.png" alt="">-->
+<!--    </div>-->
 </div>
 
 <div id="gather">
@@ -728,7 +730,7 @@
 <div class="popup" id="popup-thank-container">
     <div id="popup-thank-you-card">
         <div class="popup-card-close">
-            <img src="images/close.png" alt="">
+            <img id="close" src="images/close.png" alt="">
         </div>
         <div id="popup-thank-you-text">
             <h2 class="green-inscription">Спасибо!</h2>
@@ -750,32 +752,26 @@
                 <div id="popup-order-form-items">
                     <select name="" id="user-order">
                         <optgroup label="Белый чай">
-                            <option value="">Формоза</option>
-                            <option value="">Черничные ночи</option>
-                            <option value="">Те Гуань Инь женьшень</option>
-                            <option value="">Да Хун Пао</option>
-                            <option value="">Те Гуань Инь 250</option>
+                            <option value="">Инь Чжень</option>
+                            <option value="">Шоу Мэй</option>
+                            <option value="">Четыре Мелодии Чая</option>
                         </optgroup>
                         <optgroup label="Черный чай">
-                            <option value="">Формоза</option>
-                            <option value="">Черничные ночи</option>
-                            <option value="">Те Гуань Инь женьшень</option>
-                            <option value="">Да Хун Пао</option>
-                            <option value="">Те Гуань Инь 250</option>
+                            <option value="">Масала</option>
+                            <option value="">Тадж Махал</option>
+                            <option value="">Жемчужины дракона</option>
+                            <option value="">Килиманджаро Премиум</option>
                         </optgroup>
                         <optgroup label="Зелёный чай">
-                            <option value="">Формоза</option>
-                            <option value="">Черничные ночи</option>
-                            <option value="">Те Гуань Инь женьшень</option>
-                            <option value="">Да Хун Пао</option>
-                            <option value="">Те Гуань Инь 250</option>
+                            <option value="">Кудин веретено</option>
+                            <option value="">Меч самурая</option>
+                            <option value="">Завтрак гейши</option>
+                            <option value="">Гиокура Асахи</option>
                         </optgroup>
                         <optgroup label="Эксклюзивные миксы">
-                            <option value="">Формоза</option>
-                            <option value="">Черничные ночи</option>
-                            <option value="">Те Гуань Инь женьшень</option>
-                            <option value="">Да Хун Пао</option>
-                            <option value="">Те Гуань Инь 250</option>
+                            <option value="">Чай со вкусом шмпанского</option>
+                            <option value="">Домашний очаг</option>
+                            <option value="">Сладкий апельсин</option>
                         </optgroup>
                         <optgroup label="Улун">
                             <option value="">Формоза</option>
@@ -785,13 +781,39 @@
                             <option value="">Те Гуань Инь 250</option>
                         </optgroup>
                     </select>
-                    <input id="user-weight" type="text" placeholder="Кол-во грамм">
-                    <input id="user-name" type="text" placeholder="Ваше имя">
-                    <input id="user-phone" type="text" placeholder="Ваш телефон">
+                    <div class="input">
+                        <input id="user-weight" type="text" placeholder="Кол-во грамм">
+                        <div class="order-form-error">Необходимо ввести количество грамм</div>
+                    </div>
+                    <div class="input">
+                        <input id="user-name" type="text" placeholder="Ваше имя">
+                        <div class="order-form-error">Необходимо ввести Ваше имя</div>
+                    </div>
+                    <div class="input">
+                        <input id="user-phone" type="tel" placeholder="Ваш телефон">
+                        <div class="order-form-error">Необходимо ввести телефон</div>
+                    </div>
                 </div>
-                <button id="form-button" class="btn">Оформить заказ</button>
+                <button type="button" id="form-button" class="btn">Оформить заказ</button>
             </form>
         </div>
+    </div>
+</div>
+
+<div id="loader">
+    <div class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
 </div>
 

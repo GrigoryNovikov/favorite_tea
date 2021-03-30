@@ -1,0 +1,104 @@
+/*1261-1440x*/
+@media screen and (max-width: 1440px) {
+
+    main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #advantage-items {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+
+
+/*1024-1230px*/
+@media screen and (max-width: 1230px) {
+
+    #offers-container-group1 {
+        justify-content: center;
+    }
+
+    #offers-container-group1 .offer-item:first-child {
+        margin-left: -150px;
+        margin-bottom: 20px;
+    }
+
+    #offers-container-group1 .offer-item:last-child {
+        margin-left: 250px;
+    }
+
+    #offers-container-group2 {
+        justify-content: center;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    #offers-container-group2 .offer-item {
+        flex-direction: row-reverse;
+    }
+
+    #offers-container-group2 .offer-item .offer-item-description {
+        margin-left: 30px;
+    }
+
+    #offers-container-group2 .offer-item:first-child {
+        margin-left: -270px;
+        margin-bottom: 20px;
+    }
+
+    #offers-container-group2 .offer-item:last-child {
+        margin-left: 180px;
+    }
+
+    #assortment {
+        margin-top: 130px;
+    }
+
+    #sale-container {
+        padding: 0 30px;
+    }
+
+    #gather-container-content-text {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    #gather-container-content-text p {
+        font-size: 20px;
+        width: 600px;
+    }
+
+    footer {
+        height: unset;
+    }
+
+    #footer-container {
+        padding: 0 20px 20px 20px;
+    }
+
+    #footer-information {
+        margin-left: 50px;
+    }
+
+    .footer-information-text {
+        font-size: 10px;
+    }
+
+    footer > img {
+        right: 20%;
+    }
+
+    #footer-information-time, #footer-information-phones {
+        margin-left: 30px;
+    }
+}
+
+/*768-1023px*/
+@media screen and (max-width: 1023px) {
+
+
+}
