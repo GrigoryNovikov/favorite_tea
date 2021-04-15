@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Exclusive tea</title>
     <link rel="stylesheet" href="css/slick.css">
-    <!--    <link rel="stylesheet" href="css/slick-theme.css">-->
     <link rel="stylesheet" href="plugins/hover-master/hover-min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
@@ -13,18 +12,27 @@
 </head>
 <body>
 
-<main>
-    <div id="main-container">
+<header>
+    <div id="header-container">
         <div id="main-menu">
-            <a href="#assortment" class="hvr-underline-from-center main-menu-item">Ассортимент</a>
-            <a href="#gather" class=" hvr-underline-from-center main-menu-item">Как мы собираем чай</a>
-            <a href="#sale" class="hvr-underline-from-center main-menu-item">Наши акции</a>
+            <a data-goto=".assortment" href="#" class="hvr-underline-from-center main-menu-item">Ассортимент</a>
+            <a data-goto=".gather" href="#" class=" hvr-underline-from-center main-menu-item">Как мы собираем чай</a>
+            <a data-goto=".sale" href="#" class="hvr-underline-from-center main-menu-item">Наши акции</a>
             <a href="#" class="logo">
                 <img src="images/logo.png" alt="">
             </a>
-            <a href="#properties" class="hvr-underline-from-center main-menu-item">Полезные свойства</a>
-            <a href="#footer-container" class="hvr-underline-from-center main-menu-item">Контакты</a>
+            <a data-goto=".properties" href="#" class="hvr-underline-from-center main-menu-item">Полезные свойства</a>
+            <a data-goto=".footer" href="#" class="hvr-underline-from-center main-menu-item">Контакты</a>
         </div>
+    </div>
+    <div id="burger">
+        <span></span>
+    </div>
+</header>
+
+<main>
+    <div id="main-container">
+
         <div id="main-content">
             <h1 id="main-content-title">Эксклюзивный чай</h1>
             <p class="green-inscription">из разных уголков планеты</p>
@@ -141,7 +149,7 @@
     </div>
 </div>
 
-<div id="assortment">
+<div id="assortment" class="assortment">
     <h2 class="green-inscription">Наш ассортимент чая</h2>
     <div id="assortment-slider">
         <div id="assortment-slider-menu">
@@ -556,7 +564,7 @@
     </div>
 </div>
 
-<div id="sale-container">
+<div id="sale-container" class="sale">
     <div id="sale">
         <img id="sale-container-back" src="images/floating%20leaves_sale.png" alt="">
         <div id="sale-image">
@@ -574,9 +582,9 @@
             </form>
         </div>
     </div>
-</div>
+</div >
 
-<div id="properties">
+<div id="properties" class="properties">
     <h2 class="green-inscription">Полезные свойства чая</h2>
     <div id="properties-circle">
         <div id="properties-circle2">
@@ -607,12 +615,12 @@
             </div>
         </div>
     </div>
-<!--    <div id="properties-back-image">-->
-<!--        <img  src="images/floating%20leaves_useful-properties.png" alt="">-->
-<!--    </div>-->
+    <!--    <div id="properties-back-image">-->
+    <!--        <img  src="images/floating%20leaves_useful-properties.png" alt="">-->
+    <!--    </div>-->
 </div>
 
-<div id="gather">
+<div id="gather" class="gather">
     <div id="gather-container">
         <h2 class="green-inscription">Как мы собираем наш чай</h2>
         <div id="gather-container-content">
@@ -620,7 +628,8 @@
                 <iframe width="714" height="477" src="https://www.youtube.com/embed/dDu-piWKaq8" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-                <img id="pulse" src="images/video-circle.png" alt="">
+                <div id="video-circle-big" class="video-circle pulse"></div>
+                <div id="video-circle-small" class="video-circle pulse"></div>
                 <img id="video-mint" src="images/mint.png" alt="">
             </div>
             <div id="gather-container-content-text">
@@ -649,7 +658,7 @@
     </div>
 </div>
 
-<footer>
+<footer id="footer" class="footer">
     <img src="images/tea-branch.png" alt="">
     <div id="footer-container">
         <div id="footer-container-content">
@@ -727,7 +736,7 @@
     </div>
 </footer>
 
-<div class="popup" id="popup-thank-container">
+<div class="popup main-menu-item" id="popup-thank-container ">
     <div id="popup-thank-you-card">
         <div class="popup-card-close">
             <img id="close" src="images/close.png" alt="">
@@ -741,7 +750,7 @@
     </div>
 </div>
 
-<div class="popup" id="popup-order-container">
+<div class="popup main-menu-item" id="popup-order-container">
     <div id="popup-order">
         <div class="popup-card-close">
             <img id="form-close" src="images/close.png" alt="">
@@ -817,15 +826,13 @@
     </div>
 </div>
 
-<script src="jquery-3.6.0.min.js"></script>
-<script src="slick.min.js"></script>
-<script src="jquery.enllax.min.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.enllax.min.js"></script>
 <script src="plugins/circletype.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/main.js"></script>
-<script>
-    new WOW().init();
-</script>
+
 
 </body>
 </html>

@@ -1,6 +1,11 @@
 /*1261-1440x*/
 @media screen and (max-width: 1440px) {
 
+    #main-menu {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     main {
         padding-left: 20px;
         padding-right: 20px;
@@ -14,9 +19,9 @@
 }
 
 
-
 /*1024-1230px*/
 @media screen and (max-width: 1230px) {
+
 
     #offers-container-group1 {
         justify-content: center;
@@ -95,10 +100,536 @@
     #footer-information-time, #footer-information-phones {
         margin-left: 30px;
     }
+
+    #properties-circle {
+        width: 400px;
+        height: 400px;
+        top: unset;
+        left: calc(50% - 200px);
+        margin-top: 40px;
+    }
+
+    #properties-circle2 {
+        left: calc(50% - 140px);
+        top: calc(50% - 140px);
+        width: 280px;
+        height: 280px;
+    }
+
+    #properties-circle2-image {
+        width: 117%;
+        left: calc(50% - 180px);
+        top: calc(50% - 144px);
+    }
+
+    .properties-info {
+        margin-top: 80px;
+    }
+
+    #properties-container .properties-info .inscription {
+        font-size: 16px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription:nth-child(1) {
+        margin-top: 35px;
+        margin-left: 120px;
+        width: 220px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription:nth-child(1)::after {
+        top: -86px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription:nth-child(2) {
+        margin-top: 65px;
+        width: 270px;
+        margin-left: 15px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription::after {
+        top: -86px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription:nth-child(3) {
+        margin-top: 50px;
+        margin-left: 25px;
+        width: 277px;
+    }
+
+
+    #properties-container .properties-info:nth-child(1) .inscription:nth-child(3)::after {
+        left: 232px;
+        top: -64px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription:nth-child(3)::after {
+        left: 231px;
+    }
+
+    #properties-container .properties-info .inscription {
+        padding-bottom: 5px;
+    }
+
+    .properties-info:nth-child(2) {
+        align-items: flex-start;
+    }
+
+    #properties-container .properties-info:nth-child(2) .inscription:nth-child(1) {
+        width: 182px;
+        padding-left: 25px;
+        margin-right: unset;
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+
+    #properties-container .properties-info:nth-child(2) .inscription::before {
+        top: -77px;
+    }
+
+    #properties-container .properties-info:nth-child(2) .inscription:nth-child(2) {
+        margin-right: unset;
+        margin-left: 105px;
+        margin-top: 80px;
+        padding-left: 30px;
+        width: 215px;
+    }
+
+    #properties-container .properties-info:nth-child(2) .inscription:nth-child(3) {
+        margin-top: 50px;
+        width: 300px;
+        padding-left: 30px;
+        margin-left: 60px;
+    }
+
+    #properties-container .properties-info:nth-child(2) .inscription:nth-child(3)::before {
+        top: -55px;
+    }
+
+
+    footer > img {
+        right: 10%;
+    }
 }
 
 /*768-1023px*/
 @media screen and (max-width: 1023px) {
+    .logo {
+        order: -1;
+        z-index: 2;
+    }
+
+    .logo.active {
+        margin-bottom: 30px;
+    }
+
+    header.active {
+        position: fixed;
+        height: 100%;
+        background-color: rgba(41, 61, 41, 0.94);
+        z-index: 99;
+        overflow: hidden;
+    }
 
 
+    #main-menu.active {
+        flex-direction: column;
+    }
+
+    .main-menu-item {
+        display: none;
+    }
+
+    .main-menu-item.active {
+        display: flex;
+        font-size: 25px;
+        color: #8bc34a;
+        padding: 10px;
+    }
+
+    #main-content {
+        padding-top: 238px;
+    }
+
+    #burger {
+        display: inline-block;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        position: absolute;
+        z-index: 3;
+        right: 40px;
+        top: 40px;
+    }
+
+    #burger::after,
+    #burger::before,
+    #burger span {
+        left: 0;
+        position: absolute;
+        width: 100%;
+        background-color: #80a506;
+        height: 10%;
+        transition: all 0.3s ease 0s;
+        border-radius: 2px;
+    }
+
+    #burger::after,
+    #burger::before {
+        content: "";
+    }
+
+    #burger::after {
+        bottom: 0;
+    }
+
+    #burger::before {
+        top: 0;
+    }
+
+    #burger span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    #burger.active span {
+        transform: scale(0);
+    }
+
+    #burger.active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    #burger.active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+
+    #main-content-title {
+        font-size: 60px;
+    }
+
+    #main-content .green-inscription {
+        font-size: 35px;
+    }
+
+    #main-content .inscription {
+        margin: 30px 0;
+        max-width: 310px;
+        font-size: 15px;
+    }
+
+    #main-content a.btn {
+        width: 250px;
+        height: 55px;
+        line-height: 55px;
+    }
+
+    .btn::after {
+        right: -35px;
+        top: -14px;
+        width: 83px;
+        height: 80px;
+    }
+
+    #advantage-items {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: unset;
+    }
+
+    .advantage-item {
+        margin: 30px;
+    }
+
+    #offers-container-group1 .offer-item:first-child {
+        margin-left: -65px;
+    }
+
+
+    .products-container .my-item-card {
+        width: 600px;
+        height: 350px;
+    }
+
+    #sale-container {
+        margin-top: 130px;
+    }
+
+    #sale::after {
+        background-size: cover;
+        width: 200px;
+        height: 165px;
+    }
+
+    #sale {
+        max-width: 600px;
+        height: 350px;
+        padding: 50px 30px;
+    }
+
+    #sale-form-text h2 {
+        margin: 0 0 10px 0;
+        font-size: 28px;
+    }
+
+    #sale-form-text div {
+        font-size: 13px;
+        margin: 10px 0;
+    }
+
+    #form input {
+        margin-top: 10px;
+        width: 250px;
+        height: 45px;
+        line-height: 40px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    #sale-image img {
+        width: 100%;
+    }
+
+    #form button {
+        width: 250px;
+        margin-top: 25px;
+    }
+
+    #form button.btn {
+        height: 45px;
+        font-size: 16px;
+        line-height: 45px;
+    }
+
+    #form button.btn::after {
+        width: 83px;
+        height: 80px;
+        top: -15px;
+    }
+
+    #gather {
+        margin-top: 130px;
+    }
+
+    #video iframe {
+        width: 600px;
+        height: 340px;
+    }
+
+    #properties-circle {
+        width: 271px;
+        height: 271px;
+        position: absolute;
+        top: unset;
+        left: calc(50% - 135px)
+    }
+
+    #properties-circle2 {
+        left: calc(50% - 92px);
+        top: calc(50% - 92px);
+        width: 185px;
+        height: 185px;
+    }
+
+    #properties-circle2-image {
+        width: 214px;
+        left: calc(50% - 118px);
+        top: calc(50% - 95px);
+    }
+
+    #offers-container-group2 .offer-item:last-child {
+        margin-left: unset;
+    }
+
+    #offers-container-group1 .offer-item:last-child {
+        margin-left: 100px;
+    }
+
+    .properties-info {
+        margin-top: unset;
+    }
+
+    #properties-container .properties-info .inscription {
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription::after {
+        background-size: cover;
+        height: 130px;
+        width: 120px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription:nth-child(1)::after {
+        left: 149px;
+        top: -66px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription:nth-child(1) {
+        margin-top: 120px;
+        margin-left: 55px;
+        width: 185px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription:nth-child(1) {
+        margin-top: 80px;
+        margin-left: 90px;
+        width: 160px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription:nth-child(1):after {
+        left: 124px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription:nth-child(2) {
+        margin-top: 40px;
+        width: 200px;
+        margin-left: 40px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription::after {
+        top: -47px;
+        left: 163px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription:nth-child(3) {
+        margin-top: 40px;
+        margin-left: 35px;
+        width: 225px;
+    }
+
+    #properties-container .properties-info:nth-child(1) .inscription:nth-child(3)::after {
+        left: 189px;
+        top: -47px;
+    }
+
+    #properties-container .properties-info:nth-child(2) .inscription::before {
+        background-size: cover;
+        width: 130px;
+        height: 120px;
+    }
+
+
+    #properties-container .properties-info:nth-child(2) .inscription:nth-child(1) {
+        width: 182px;
+        padding-left: 25px;
+        margin-right: unset;
+        margin-left: 105px;
+        margin-top: 60px;
+    }
+
+    #properties-container .properties-info:nth-child(2) .inscription::before {
+        top: -51px;
+        left: -87px;
+    }
+
+    #properties-container .properties-info:nth-child(2) .inscription:nth-child(2) {
+        margin-right: unset;
+        margin-left: 150px;
+        margin-top: 65px;
+        padding-left: 20px;
+        width: 190px;
+    }
+
+    #properties-container .properties-info:nth-child(2) .inscription:nth-child(3) {
+        margin-top: 25px;
+        width: 220px;
+        padding-left: 20px;
+        margin-left: 120px;
+    }
+
+    #properties-container .properties-info:nth-child(2) .inscription:nth-child(3)::before {
+        top: -13px;
+    }
+
+    #gather-container-content-text p {
+        font-size: 16px;
+        width: 500px;
+    }
+
+    footer {
+        margin-top: 90px;
+    }
+
+    footer > img {
+        right: 20%;
+        width: 150px;
+        top: 0;
+    }
+
+    #footer-container-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #footer-information {
+        width: 100%;
+        margin-left: unset;
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+    }
+
+    #footer-icons {
+        display: flex;
+        margin-top: 20px;
+        margin-left: unset;
+    }
+
+    #rights {
+        text-align: center;
+        margin-left: unset;
+        margin-top: 30px;
+    }
+
+    #footer-information-time, #footer-information-phones {
+        margin-left: 0;
+    }
+
+    .footer-information-head {
+        font-size: 20px;
+    }
+
+    .footer-information-text {
+        font-size: 14px;
+    }
+}
+
+/*425-767px*/
+@media screen and (max-width: 767px) {
+    #main-content-title {
+        font-size: 40px;
+    }
+
+    #main-content {
+        padding-top: 130px;
+    }
+
+    #main-content .green-inscription {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    #main-content .inscription {
+        margin: 20px 0;
+        max-width: 310px;
+        font-size: 10px;
+    }
+
+    #main-content a.btn {
+        width: 165px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+    }
+
+    .btn::after {
+        right: -23px;
+        top: -10px;
+        width: 60px;
+        height: 58px;
+    }
 }
